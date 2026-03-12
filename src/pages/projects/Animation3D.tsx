@@ -2,6 +2,7 @@ import { ProjectLayout } from "@/src/components/ProjectLayout";
 import { ScopeGrid } from "@/src/components/ScopeGrid";
 import { FadeIn } from "@/src/components/FadeIn";
 import { VideoPlayer } from "@/src/components/VideoPlayer";
+import { ProjectGantt } from "@/src/components/ProjectGantt";
 
 export function Animation3D() {
   return (
@@ -20,6 +21,18 @@ export function Animation3D() {
       />
 
       <div className="space-y-24 mt-12">
+        <FadeIn>
+          <h3 className="text-2xl font-bold text-primary mb-4 uppercase tracking-wider">Production Timeline</h3>
+          <ProjectGantt 
+            totalWeeks={4}
+            tasks={[
+              { name: "Modeling", startWeek: 0, durationWeeks: 2 },
+              { name: "Texturing", startWeek: 1.5, durationWeeks: 1 },
+              { name: "Animation", startWeek: 2, durationWeeks: 2 }
+            ]} 
+          />
+        </FadeIn>
+
         <FadeIn>
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-center">
             <div className="lg:col-span-1">

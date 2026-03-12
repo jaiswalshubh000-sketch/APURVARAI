@@ -3,6 +3,7 @@ import { ScopeGrid } from "@/src/components/ScopeGrid";
 import { WorkflowDiagram } from "@/src/components/WorkflowDiagram";
 import { VideoPlayer } from "@/src/components/VideoPlayer";
 import { FadeIn } from "@/src/components/FadeIn";
+import { ProjectGantt } from "@/src/components/ProjectGantt";
 
 export function Bulgari() {
   return (
@@ -49,7 +50,17 @@ export function Bulgari() {
 
       <FadeIn className="mb-12">
         <h3 className="text-2xl font-bold text-primary mb-4 uppercase tracking-wider">Workflow & Tools</h3>
-        <WorkflowDiagram steps={["Ideation", "Prompt Engineering", "AI Generation", "Video Editing"]} />
+        <ProjectGantt 
+          totalWeeks={2}
+          tasks={[
+            { name: "Concept", startWeek: 0, durationWeeks: 0.5 },
+            { name: "AI Generation", startWeek: 0.5, durationWeeks: 1 },
+            { name: "Editing", startWeek: 1.5, durationWeeks: 0.5 }
+          ]} 
+        />
+        <div className="mt-8">
+          <WorkflowDiagram steps={["Ideation", "Prompt Engineering", "AI Generation", "Video Editing"]} />
+        </div>
         <p className="text-gray-400 leading-relaxed mt-4 font-mono text-sm mb-6">
           Tools: ChatGPT (concept), Midjourney (Nano Banana, Flow) for images, Suno AI for audio, After Effects for editing.
         </p>

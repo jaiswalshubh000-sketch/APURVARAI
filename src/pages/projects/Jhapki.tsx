@@ -3,6 +3,8 @@ import { ScopeGrid } from "@/src/components/ScopeGrid";
 import { Timeline } from "@/src/components/Timeline";
 import { WorkflowDiagram } from "@/src/components/WorkflowDiagram";
 import { FadeIn } from "@/src/components/FadeIn";
+import { VideoPlayer } from "@/src/components/VideoPlayer";
+import { ProjectGantt } from "@/src/components/ProjectGantt";
 
 export function Jhapki() {
   const remainingImages = [
@@ -34,6 +36,13 @@ export function Jhapki() {
         ]}
       />
 
+      <FadeIn className="mb-12">
+        <h3 className="text-2xl font-bold text-primary mb-6 uppercase tracking-wider">Final Film</h3>
+        <div className="rounded-xl overflow-hidden border border-white/10">
+          <VideoPlayer url="https://www.youtube.com/embed/YOUR_JHAPKI_VIDEO_ID" />
+        </div>
+      </FadeIn>
+
       <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-12">
         <FadeIn>
           <h3 className="text-2xl font-bold text-primary mb-4 uppercase tracking-wider">Concept</h3>
@@ -53,7 +62,16 @@ export function Jhapki() {
 
       <FadeIn className="mb-12">
         <h3 className="text-2xl font-bold text-primary mb-6 uppercase tracking-wider">Production Timeline</h3>
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+        <ProjectGantt 
+          totalWeeks={6}
+          tasks={[
+            { name: "Pre-production & Storyboarding", startWeek: 0, durationWeeks: 1 },
+            { name: "Set Construction & Rigging", startWeek: 1, durationWeeks: 2 },
+            { name: "Stop Motion Animation", startWeek: 2, durationWeeks: 3 },
+            { name: "Post-production & Sound", startWeek: 5, durationWeeks: 1 }
+          ]} 
+        />
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center mt-8">
           <Timeline
             items={[
               { title: "Pre-production", desc: "Storyboarding, character design, and material sourcing." },

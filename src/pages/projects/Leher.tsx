@@ -4,6 +4,7 @@ import { Timeline } from "@/src/components/Timeline";
 import { WorkflowDiagram } from "@/src/components/WorkflowDiagram";
 import { VideoPlayer } from "@/src/components/VideoPlayer";
 import { FadeIn } from "@/src/components/FadeIn";
+import { ProjectGantt } from "@/src/components/ProjectGantt";
 
 export function Leher() {
   return (
@@ -48,12 +49,22 @@ export function Leher() {
 
       <FadeIn>
         <h3 className="text-2xl font-bold text-primary mb-6 uppercase tracking-wider">Timeline</h3>
-        <Timeline
-          items={[
-            { title: "Week 1", desc: "Concept & storyboarding. Establishing the visual language and emotional beats." },
-            { title: "Week 2", desc: "Animation, stop-motion shoots, sound design, editing, and final compositing." },
-          ]}
+        <ProjectGantt 
+          totalWeeks={2}
+          tasks={[
+            { name: "Concept & Storyboarding", startWeek: 0, durationWeeks: 1 },
+            { name: "Animation & Stop-motion", startWeek: 0.5, durationWeeks: 1 },
+            { name: "Sound Design & Editing", startWeek: 1, durationWeeks: 1 }
+          ]} 
         />
+        <div className="mt-8">
+          <Timeline
+            items={[
+              { title: "Week 1", desc: "Concept & storyboarding. Establishing the visual language and emotional beats." },
+              { title: "Week 2", desc: "Animation, stop-motion shoots, sound design, editing, and final compositing." },
+            ]}
+          />
+        </div>
       </FadeIn>
 
       <FadeIn>
@@ -89,7 +100,7 @@ export function Leher() {
 
       <FadeIn>
         <h3 className="text-2xl font-bold text-primary mb-8 uppercase tracking-wider text-center">Final Output</h3>
-        <VideoPlayer url="https://www.youtube.com/embed/dQw4w9WgXcQ" />
+        <VideoPlayer url="https://www.youtube.com/embed/YOUR_LEHER_VIDEO_ID" />
       </FadeIn>
     </ProjectLayout>
   );

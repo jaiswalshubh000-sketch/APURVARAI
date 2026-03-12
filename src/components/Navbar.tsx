@@ -2,6 +2,7 @@ import { Link, useLocation } from "react-router-dom";
 import { Linkedin, Menu, X } from "lucide-react";
 import { useState } from "react";
 import { cn } from "@/src/lib/utils";
+import { LanguageSwitcher } from "@/src/components/LanguageSwitcher";
 
 export function Navbar() {
   const [isOpen, setIsOpen] = useState(false);
@@ -9,11 +10,6 @@ export function Navbar() {
 
   const links = [
     { name: "Home", path: "/" },
-    { name: "Projects", path: "/projects" },
-    { name: "Sketchbook", path: "/sketchbook" },
-    { name: "About", path: "/about" },
-    { name: "Resume", path: "/resume" },
-    { name: "Commissions", path: "/commissions" },
     { name: "Contact", path: "/contact" },
   ];
 
@@ -55,9 +51,15 @@ export function Navbar() {
               >
                 Book a Call
               </a>
+              <div className="ml-2 flex items-center h-9">
+                <LanguageSwitcher id="google_translate_element" />
+              </div>
             </div>
           </div>
-          <div className="-mr-2 flex lg:hidden">
+          <div className="-mr-2 flex lg:hidden items-center gap-4">
+            <div className="flex items-center">
+              <LanguageSwitcher id="google_translate_element_mobile" />
+            </div>
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none"

@@ -4,6 +4,7 @@ import { Timeline } from "@/src/components/Timeline";
 import { WorkflowDiagram } from "@/src/components/WorkflowDiagram";
 import { FadeIn } from "@/src/components/FadeIn";
 import { VideoPlayer } from "@/src/components/VideoPlayer";
+import { ProjectGantt } from "@/src/components/ProjectGantt";
 
 export function Nivara() {
   return (
@@ -58,13 +59,24 @@ export function Nivara() {
 
       <FadeIn className="mb-12">
         <h3 className="text-2xl font-bold text-primary mb-6 uppercase tracking-wider">Timeline & Process</h3>
-        <Timeline
-          items={[
-            { title: "Week 1", desc: "World concept and lore development. Establishing the rules of Nivara." },
-            { title: "Week 2", desc: "Concept art generation, environment visuals, and character archetypes." },
-            { title: "Week 3", desc: "Installation building, documentation, and final presentation prep." },
-          ]}
+        <ProjectGantt 
+          totalWeeks={3}
+          tasks={[
+            { name: "World Concept & Lore", startWeek: 0, durationWeeks: 1 },
+            { name: "Concept Art & Visuals", startWeek: 0.5, durationWeeks: 1.5 },
+            { name: "Installation Building", startWeek: 1.5, durationWeeks: 1.5 },
+            { name: "Documentation", startWeek: 2, durationWeeks: 1 }
+          ]} 
         />
+        <div className="mt-8">
+          <Timeline
+            items={[
+              { title: "Week 1", desc: "World concept and lore development. Establishing the rules of Nivara." },
+              { title: "Week 2", desc: "Concept art generation, environment visuals, and character archetypes." },
+              { title: "Week 3", desc: "Installation building, documentation, and final presentation prep." },
+            ]}
+          />
+        </div>
         <div className="grid grid-cols-1 sm:grid-cols-3 gap-6 mt-8">
           <img src="https://i.postimg.cc/7JkxHS25/95e01a1b-2bda-4442-b942-8de0b7191e18.jpg" alt="Process 1" className="w-full rounded-xl border border-white/10" referrerPolicy="no-referrer" />
           <img src="https://i.postimg.cc/1fy9bcSH/9756f0ba-5391-4779-b1a4-2c693132d2cd.jpg" alt="Process 2" className="w-full rounded-xl border border-white/10" referrerPolicy="no-referrer" />

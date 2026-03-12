@@ -51,45 +51,6 @@ export function NeuralBackground({ opacity = 0.4 }: NeuralBackgroundProps) {
       ctx.clearRect(0, 0, canvas.width, canvas.height);
       time += 0.02;
       
-      // Draw heartbeat graph
-      ctx.beginPath();
-      ctx.strokeStyle = 'rgba(229, 9, 20, 0.6)';
-      ctx.lineWidth = 3;
-      
-      const centerY = canvas.height / 2;
-      const period = 600;
-      
-      for (let x = 0; x < canvas.width; x += 2) {
-        const localX = (x - time * 150) % period;
-        const normalizedX = localX < 0 ? localX + period : localX;
-        
-        let yOffset = 0;
-        
-        if (normalizedX > 50 && normalizedX < 80) {
-          // P wave
-          yOffset = -Math.sin((normalizedX - 50) * Math.PI / 30) * 20;
-        } else if (normalizedX > 110 && normalizedX < 120) {
-          // Q wave
-          yOffset = Math.sin((normalizedX - 110) * Math.PI / 10) * 20;
-        } else if (normalizedX >= 120 && normalizedX < 130) {
-          // R wave
-          yOffset = -Math.sin((normalizedX - 120) * Math.PI / 10) * 150;
-        } else if (normalizedX >= 130 && normalizedX < 140) {
-          // S wave
-          yOffset = Math.sin((normalizedX - 130) * Math.PI / 10) * 45;
-        } else if (normalizedX > 180 && normalizedX < 230) {
-          // T wave
-          yOffset = -Math.sin((normalizedX - 180) * Math.PI / 50) * 35;
-        }
-        
-        if (x === 0) {
-          ctx.moveTo(x, centerY + yOffset);
-        } else {
-          ctx.lineTo(x, centerY + yOffset);
-        }
-      }
-      ctx.stroke();
-      
       // Update and draw particles
       particles.forEach((p, i) => {
         p.x += p.vx;
