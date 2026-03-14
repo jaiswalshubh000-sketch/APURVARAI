@@ -145,8 +145,8 @@ export function Jhapki() {
         <p className="text-gray-400 leading-relaxed text-lg mb-6">
           Short Stop-Motion Film & Behind-the-Scenes Documentation.
         </p>
-        <div className="rounded-xl overflow-hidden border border-white/10">
-          <VideoPlayer url="https://www.youtube.com/embed/YOUR_JHAPKI_VIDEO_ID" />
+        <div className="rounded-xl overflow-hidden border border-white/10 aspect-video">
+          <img src="https://i.postimg.cc/vDdfKjNr/35796491-6996-4603-9b59-e17b5d2a8ae2.jpg" alt="Jhapki Deliverable" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
         </div>
       </ProjectSection>
 

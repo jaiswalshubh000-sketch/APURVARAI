@@ -1,7 +1,5 @@
 import { ProjectLayout } from "@/src/components/ProjectLayout";
-import { ScopeGrid } from "@/src/components/ScopeGrid";
 import { FadeIn } from "@/src/components/FadeIn";
-import { ProjectSection } from "@/src/components/ProjectSection";
 
 const rawUrls = [
   "https://drive.google.com/file/d/1-wkDFP8V32oTcNBBiBv6gzzDSGBjVBJD/view?usp=sharing",
@@ -102,146 +100,26 @@ const projects = [
   {
     id: "3d-environment",
     title: "3D Environment Development Project",
-    heroImage: images[0],
-    processImages: images.slice(1, 10),
-    finalImages: images.slice(10, 20),
-    overview: {
-      what: "A deep dive into the technical aspects of creative production, focusing on 3D modeling, sculpting, and real-time environment building.",
-      type: "3D environment study",
-      explores: "High-poly sculpting, retopology, texturing, and integration into real-time engines."
-    },
-    scope: {
-      goal: "Master 3D pipelines and real-time integration",
-      focus: "3D modeling and environment design",
-      techniques: "3D Sculpting, Retopology, Texturing",
-      medium: "Digital 3D",
-      outcome: "Cinematic renders and environment builds"
-    },
-    roles: [
-      "Concept development and visual planning",
-      "High-fidelity 3D sculpting",
-      "Environment design and layout",
-      "Project coordination"
-    ],
-    tools: {
-      "3D Tools": ["ZBrush", "Blender", "Autodesk Maya", "Unreal Engine", "Substance Painter"],
-      "Creative Tools": ["Adobe After Effects", "Adobe Premiere Pro"],
-      "AI Tools": ["ChatGPT", "Gemini"]
-    },
-    deliverables: "Cinematic renders, environment renders, and high-resolution stills.",
-    challenges: {
-      problem: "Managing extremely high polygon counts from detailed ZBrush sculpts caused significant performance bottlenecks when importing assets into real-time environments like Unreal Engine.",
-      solution: "Implemented a strict retopology workflow in Autodesk Maya to create optimized, low-poly meshes. High-resolution details were then baked into normal and displacement maps using Substance Painter, ensuring maximum visual fidelity without sacrificing real-time performance."
-    },
-    outcome: "Demonstrates a comprehensive understanding of the creative process and technical skill required for modern 3D production, highlighting an ability to solve complex technical challenges while maintaining strong visual storytelling."
+    description: "A deep dive into the technical aspects of creative production, focusing on 3D modeling, sculpting, and real-time environment building.",
+    images: images.slice(0, 20),
   },
   {
     id: "digital-comic",
     title: "Digital Comic Project",
-    heroImage: images[20],
-    processImages: images.slice(21, 30),
-    finalImages: images.slice(30, 40),
-    overview: {
-      what: "A visual narrative development project exploring comic storytelling, pacing, and digital illustration techniques.",
-      type: "Comic storytelling exercise",
-      explores: "Sequential art, panel layout, and visual narrative development."
-    },
-    scope: {
-      goal: "Develop a compelling visual narrative through sequential art",
-      focus: "Visual narrative development",
-      techniques: "Digital illustration, panel layout, and pacing",
-      medium: "Digital 2D",
-      outcome: "Completed comic panels and pages"
-    },
-    roles: [
-      "Concept development",
-      "Visual planning and storyboard creation",
-      "Illustration and inking",
-      "Creative direction"
-    ],
-    tools: {
-      "3D Tools": ["Blender (for reference)"],
-      "Creative Tools": ["Procreate", "Adobe Illustrator", "Adobe Photoshop"],
-      "AI Tools": ["ChatGPT (for script ideation)"]
-    },
-    deliverables: "Finished comic panels, character sheets, and illustration outputs.",
-    challenges: {
-      problem: "Maintaining consistent character proportions and dynamic perspectives across multiple sequential panels.",
-      solution: "Created detailed character turnaround sheets and utilized 3D reference models in Blender to block out complex angles before committing to final illustrations in Procreate."
-    },
-    outcome: "Highlights an ability to convey complex narratives through sequential art, demonstrating strong visual storytelling, pacing, and a solid understanding of production workflows for 2D media."
+    description: "A visual narrative development project exploring comic storytelling, pacing, and digital illustration techniques.",
+    images: images.slice(20, 40),
   },
   {
     id: "graphic-traditional",
     title: "Graphic Traditional Artwork",
-    heroImage: images[40],
-    processImages: images.slice(41, 50),
-    finalImages: images.slice(50, 60),
-    overview: {
-      what: "An exploration of traditional graphic art techniques, blending physical mediums with digital enhancements for unique visual outputs.",
-      type: "Illustration project",
-      explores: "Mixed media, traditional sketching, and digital compositing."
-    },
-    scope: {
-      goal: "Bridge the gap between traditional art techniques and modern digital workflows",
-      focus: "Graphic illustration and mixed media",
-      techniques: "Traditional sketching, inking, digital compositing",
-      medium: "Mixed Media (Traditional & Digital)",
-      outcome: "Finished artwork and illustrations"
-    },
-    roles: [
-      "Concept development",
-      "Traditional illustration and sketching",
-      "Digital enhancement and compositing",
-      "Creative direction"
-    ],
-    tools: {
-      "3D Tools": [],
-      "Creative Tools": ["Procreate", "Adobe Photoshop", "Adobe Illustrator"],
-      "AI Tools": ["Midjourney (for moodboarding)"]
-    },
-    deliverables: "High-quality finished artwork, illustration outputs, and mixed-media compositions.",
-    challenges: {
-      problem: "Preserving the tactile feel and texture of traditional mediums when digitizing the artwork for final composition.",
-      solution: "Utilized high-resolution scanning techniques and developed custom brush settings in Procreate and Photoshop to maintain the authentic texture and grain of the original physical pieces."
-    },
-    outcome: "Showcases a strong foundation in traditional art principles combined with modern digital workflows, demonstrating creative experimentation and technical skill in visual media."
+    description: "An exploration of traditional graphic art techniques, blending physical mediums with digital enhancements for unique visual outputs.",
+    images: images.slice(40, 60),
   },
   {
     id: "character-design",
     title: "Character Design and Animation Studies",
-    heroImage: images[60],
-    processImages: images.slice(61, 70),
-    finalImages: images.slice(70, 85),
-    overview: {
-      what: "A series of character design explorations and animation tests focusing on expression, movement, and personality.",
-      type: "Character design exploration and animation test",
-      explores: "2D/3D character design, rigging, and animation exercises."
-    },
-    scope: {
-      goal: "Develop expressive characters and fluid animation cycles",
-      focus: "Character expression and storytelling",
-      techniques: "Character design, rigging, keyframe animation",
-      medium: "Digital 2D & 3D",
-      outcome: "Animation clips and character turnarounds"
-    },
-    roles: [
-      "Concept development",
-      "Character design and sculpting",
-      "Animation production",
-      "Visual planning"
-    ],
-    tools: {
-      "3D Tools": ["Autodesk Maya", "Blender"],
-      "Creative Tools": ["Adobe After Effects", "Procreate"],
-      "AI Tools": ["Nano Banana", "Suno AI"]
-    },
-    deliverables: "Animation clips, character design sheets, and motion tests.",
-    challenges: {
-      problem: "Achieving natural weight, timing, and secondary motion in complex character walk cycles.",
-      solution: "Studied live-action reference footage extensively and iteratively refined keyframes and animation curves in Maya to improve the sense of gravity, momentum, and character personality."
-    },
-    outcome: "Demonstrates technical skill in character rigging and animation, emphasizing expressive movement, solid production workflows, and a deep understanding of animation principles."
+    description: "A series of character design explorations and animation tests focusing on expression, movement, and personality.",
+    images: images.slice(60, 85),
   }
 ];
 
@@ -250,78 +128,27 @@ export function TechnicalProjects() {
     <ProjectLayout
       subtitle="Technical Projects & Explorations"
       title="TECHNICAL PROJECTS"
-      tagline="A comprehensive collection of 3D modeling, environment design, illustration, and technical art explorations."
+      tagline="A curated collection of 3D modeling, environment design, illustration, and technical art explorations."
     >
       <div className="space-y-32">
-        {projects.map((project, index) => (
+        {projects.map((project) => (
           <div key={project.id} className="border-t border-white/10 pt-16 first:border-0 first:pt-0">
-            {/* 1. Project Title & Hero Image */}
-            <FadeIn className="mb-16">
-              <h2 className="text-3xl md:text-5xl font-bold uppercase tracking-tighter mb-8 text-white">
+            <FadeIn className="mb-12">
+              <h2 className="text-3xl md:text-5xl font-bold uppercase tracking-tighter mb-4 text-white">
                 {project.title}
               </h2>
-              <img 
-                src={project.heroImage} 
-                alt={`${project.title} Hero`} 
-                className="w-full h-auto max-h-[70vh] object-cover rounded-xl border border-white/10 shadow-2xl"
-                referrerPolicy="no-referrer"
-              />
+              <p className="text-gray-400 text-lg max-w-3xl mb-8">
+                {project.description}
+              </p>
             </FadeIn>
 
-            {/* 2. Overview & Scope */}
-            <ProjectSection title="Overview & Scope">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-gray-400 leading-relaxed text-lg">
-                <div className="space-y-4">
-                  <p>{project.overview.what}</p>
-                  <p><strong>Type:</strong> {project.overview.type}</p>
-                  <p><strong>Explores:</strong> {project.overview.explores}</p>
-                </div>
-                <div className="space-y-2">
-                  <p><strong>Goal:</strong> {project.scope.goal}</p>
-                  <p><strong>Medium:</strong> {project.scope.medium}</p>
-                  <p><strong>Outcome:</strong> {project.scope.outcome}</p>
-                </div>
-              </div>
-            </ProjectSection>
-
-            {/* 3. Roles & Tools */}
-            <ProjectSection title="Roles & Tools">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-gray-400 leading-relaxed text-lg">
-                <div>
-                  <strong className="text-white block mb-4">Responsibilities</strong>
-                  <ul className="list-disc list-inside space-y-2">
-                    {project.roles.map((role, i) => (
-                      <li key={i}>{role}</li>
-                    ))}
-                  </ul>
-                </div>
-                <div>
-                  <strong className="text-white block mb-4">Software Used</strong>
-                  <div className="space-y-4">
-                    {Object.entries(project.tools).map(([category, tools]) => (
-                      tools.length > 0 && (
-                        <div key={category}>
-                          <span className="text-sm font-bold text-white uppercase tracking-wider block mb-1">{category}</span>
-                          <p className="text-sm">{tools.join(", ")}</p>
-                        </div>
-                      )
-                    ))}
-                  </div>
-                </div>
-              </div>
-            </ProjectSection>
-
-            {/* 4. Process & Deliverables */}
-            <ProjectSection title="Process & Deliverables">
-              <p className="text-gray-400 leading-relaxed text-lg mb-8">
-                {project.deliverables}
-              </p>
-              <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
-                {[...project.processImages.slice(0, 4), ...project.finalImages.slice(0, 4)].map((src, i) => (
-                  <div key={i} className="relative overflow-hidden rounded-xl border border-white/10 group break-inside-avoid shadow-lg">
+            <FadeIn delay={0.2}>
+              <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
+                {project.images.map((src, index) => (
+                  <div key={index} className="relative overflow-hidden rounded-xl border border-white/10 group break-inside-avoid shadow-lg">
                     <img
                       src={src}
-                      alt={`Gallery image ${i + 1}`}
+                      alt={`${project.title} image ${index + 1}`}
                       className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700"
                       referrerPolicy="no-referrer"
                       loading="lazy"
@@ -329,16 +156,7 @@ export function TechnicalProjects() {
                   </div>
                 ))}
               </div>
-            </ProjectSection>
-
-            {/* 5. Outcome */}
-            <ProjectSection title="Outcome">
-              <div className="text-gray-400 leading-relaxed text-lg space-y-4">
-                <p><strong>Challenge:</strong> {project.challenges.problem}</p>
-                <p><strong>Solution:</strong> {project.challenges.solution}</p>
-                <p className="pt-4 border-t border-white/10">{project.outcome}</p>
-              </div>
-            </ProjectSection>
+            </FadeIn>
           </div>
         ))}
       </div>

@@ -326,7 +326,7 @@ export function Home() {
                 </Link>
               </div>
               <div className="rounded-xl overflow-hidden border border-white/10">
-                <img src="https://picsum.photos/seed/leher/800/600" alt="Leher" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
+                <img src="https://drive.google.com/thumbnail?id=14hEnkxJWwko3GM0IA9TzOuEMfVFUczqB&sz=w1920" alt="Leher" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
               </div>
             </motion.div>
           )}

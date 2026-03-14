@@ -10,8 +10,7 @@ export function EmbroideryStall() {
     "https://drive.google.com/thumbnail?id=1GG32UTQoLf_GurPBRtIYdyv7y8TScCnA&sz=w1920",
     "https://drive.google.com/thumbnail?id=1IwHJdfJ51G1dFD6YEnp1TWdx1ZB3m5ng&sz=w1920",
     "https://drive.google.com/thumbnail?id=1SL62PqDKlS2wNb1AeyJawbCGSi4dCu44&sz=w1920",
-    "https://drive.google.com/thumbnail?id=1n3F141DRWGcPLLRgPBdFhqFW4hOsUefs&sz=w1920",
-    "https://drive.google.com/thumbnail?id=1tBDf4hcwx8Bh1H91WsFOc5H&sz=w1920"
+    "https://drive.google.com/thumbnail?id=1n3F141DRWGcPLLRgPBdFhqFW4hOsUefs&sz=w1920"
   ];
 
   return (
