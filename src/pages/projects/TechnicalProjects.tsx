@@ -268,112 +268,60 @@ export function TechnicalProjects() {
               />
             </FadeIn>
 
-            {/* 2. Project Overview */}
-            <ProjectSection title="Project Overview">
-              <div className="text-gray-400 leading-relaxed text-lg space-y-4">
-                <p>{project.overview.what}</p>
-                <p><strong>Project Type:</strong> {project.overview.type}</p>
-                <p><strong>Explores:</strong> {project.overview.explores}</p>
-              </div>
-            </ProjectSection>
-
-            {/* 3. Project Scope */}
-            <ProjectSection title="Project Scope">
-              <ScopeGrid
-                items={[
-                  { label: "Goal", value: project.scope.goal },
-                  { label: "Focus", value: project.scope.focus },
-                  { label: "Techniques", value: project.scope.techniques },
-                  { label: "Medium", value: project.scope.medium },
-                  { label: "Outcome", value: project.scope.outcome },
-                ]}
-              />
-            </ProjectSection>
-
-            {/* 4. Roles & Responsibilities */}
-            <ProjectSection title="Roles & Responsibilities">
-              <div className="text-gray-400 leading-relaxed text-lg space-y-4">
-                <p><strong className="text-white">My Role:</strong> Lead Creator / Producer</p>
-                <p>Responsibilities included:</p>
-                <ul className="list-disc list-inside space-y-2 ml-4">
-                  {project.roles.map((role, i) => (
-                    <li key={i}>{role}</li>
-                  ))}
-                </ul>
-              </div>
-            </ProjectSection>
-
-            {/* 5. Production Pipeline */}
-            <ProjectSection title="Production Pipeline">
-              <div className="mb-8">
-                <div className="flex flex-wrap items-center gap-2 text-primary font-mono text-sm md:text-base">
-                  <span>Concept</span>
-                  <span>&rarr;</span>
-                  <span>Planning / Visual Exploration</span>
-                  <span>&rarr;</span>
-                  <span>Asset Creation</span>
-                  <span>&rarr;</span>
-                  <span>Modeling / Animation / Illustration</span>
-                  <span>&rarr;</span>
-                  <span>Lighting / Composition / Layout</span>
-                  <span>&rarr;</span>
-                  <span>Rendering / Editing</span>
-                  <span>&rarr;</span>
-                  <span>Final Output</span>
+            {/* 2. Overview & Scope */}
+            <ProjectSection title="Overview & Scope">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-gray-400 leading-relaxed text-lg">
+                <div className="space-y-4">
+                  <p>{project.overview.what}</p>
+                  <p><strong>Type:</strong> {project.overview.type}</p>
+                  <p><strong>Explores:</strong> {project.overview.explores}</p>
+                </div>
+                <div className="space-y-2">
+                  <p><strong>Goal:</strong> {project.scope.goal}</p>
+                  <p><strong>Medium:</strong> {project.scope.medium}</p>
+                  <p><strong>Outcome:</strong> {project.scope.outcome}</p>
                 </div>
               </div>
             </ProjectSection>
 
-            {/* 6. Production Process */}
-            <ProjectSection title="Production Process">
-              <p className="text-gray-400 leading-relaxed text-lg mb-8">
-                The process involves early sketches, concept art, various modeling/illustration stages, texture development, and animation frames.
-              </p>
-              <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
-                {project.processImages.map((src, i) => (
-                  <div key={i} className="relative overflow-hidden rounded-xl border border-white/10 group break-inside-avoid">
-                    <img
-                      src={src}
-                      alt={`Process stage ${i + 1}`}
-                      className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700"
-                      referrerPolicy="no-referrer"
-                      loading="lazy"
-                    />
-                    <div className="absolute inset-0 bg-black/20 group-hover:bg-transparent transition-colors duration-500" />
+            {/* 3. Roles & Tools */}
+            <ProjectSection title="Roles & Tools">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 text-gray-400 leading-relaxed text-lg">
+                <div>
+                  <strong className="text-white block mb-4">Responsibilities</strong>
+                  <ul className="list-disc list-inside space-y-2">
+                    {project.roles.map((role, i) => (
+                      <li key={i}>{role}</li>
+                    ))}
+                  </ul>
+                </div>
+                <div>
+                  <strong className="text-white block mb-4">Software Used</strong>
+                  <div className="space-y-4">
+                    {Object.entries(project.tools).map(([category, tools]) => (
+                      tools.length > 0 && (
+                        <div key={category}>
+                          <span className="text-sm font-bold text-white uppercase tracking-wider block mb-1">{category}</span>
+                          <p className="text-sm">{tools.join(", ")}</p>
+                        </div>
+                      )
+                    ))}
                   </div>
-                ))}
+                </div>
               </div>
             </ProjectSection>
 
-            {/* 7. Tools & Software Used */}
-            <ProjectSection title="Tools & Software Used">
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                {Object.entries(project.tools).map(([category, tools]) => (
-                  tools.length > 0 && (
-                    <div key={category}>
-                      <h4 className="text-lg font-bold text-white mb-4 uppercase tracking-wider">{category}</h4>
-                      <ul className="list-disc list-inside text-gray-400 space-y-2">
-                        {tools.map((tool, i) => (
-                          <li key={i}>{tool}</li>
-                        ))}
-                      </ul>
-                    </div>
-                  )
-                ))}
-              </div>
-            </ProjectSection>
-
-            {/* 8. Deliverables */}
-            <ProjectSection title="Deliverables">
+            {/* 4. Process & Deliverables */}
+            <ProjectSection title="Process & Deliverables">
               <p className="text-gray-400 leading-relaxed text-lg mb-8">
                 {project.deliverables}
               </p>
               <div className="columns-1 sm:columns-2 lg:columns-3 gap-4 space-y-4">
-                {project.finalImages.map((src, i) => (
+                {[...project.processImages.slice(0, 4), ...project.finalImages.slice(0, 4)].map((src, i) => (
                   <div key={i} className="relative overflow-hidden rounded-xl border border-white/10 group break-inside-avoid shadow-lg">
                     <img
                       src={src}
-                      alt={`Final deliverable ${i + 1}`}
+                      alt={`Gallery image ${i + 1}`}
                       className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700"
                       referrerPolicy="no-referrer"
                       loading="lazy"
@@ -383,24 +331,12 @@ export function TechnicalProjects() {
               </div>
             </ProjectSection>
 
-            {/* 9. Challenges & Solutions */}
-            <ProjectSection title="Challenges & Solutions">
-              <div className="space-y-6 text-gray-400 leading-relaxed text-lg">
-                <div>
-                  <strong className="text-white block mb-2">Challenge</strong>
-                  <p>{project.challenges.problem}</p>
-                </div>
-                <div>
-                  <strong className="text-white block mb-2">Solution</strong>
-                  <p>{project.challenges.solution}</p>
-                </div>
-              </div>
-            </ProjectSection>
-
-            {/* 10. Final Outcome */}
-            <ProjectSection title="Final Outcome">
+            {/* 5. Outcome */}
+            <ProjectSection title="Outcome">
               <div className="text-gray-400 leading-relaxed text-lg space-y-4">
-                <p>{project.outcome}</p>
+                <p><strong>Challenge:</strong> {project.challenges.problem}</p>
+                <p><strong>Solution:</strong> {project.challenges.solution}</p>
+                <p className="pt-4 border-t border-white/10">{project.outcome}</p>
               </div>
             </ProjectSection>
           </div>

@@ -12,6 +12,8 @@ import { Nivara } from "./pages/projects/Nivara";
 import { Bulgari } from "./pages/projects/Bulgari";
 import { Jhapki } from "./pages/projects/Jhapki";
 import { TechnicalProjects } from "./pages/projects/TechnicalProjects";
+import { EmbroideryStall } from "./pages/projects/EmbroideryStall";
+import { DurgaMataUnreal } from "./pages/projects/DurgaMataUnreal";
 import { Contact } from "./pages/Contact";
 
 function ScrollToTop() {
@@ -38,6 +40,8 @@ export default function App() {
             <Route path="/projects/bulgari" element={<Bulgari />} />
             <Route path="/projects/jhapki" element={<Jhapki />} />
             <Route path="/projects/technical" element={<TechnicalProjects />} />
+            <Route path="/projects/embroidery" element={<EmbroideryStall />} />
+            <Route path="/projects/durga" element={<DurgaMataUnreal />} />
             <Route path="/contact" element={<Contact />} />
           </Routes>
         </main>

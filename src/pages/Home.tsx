@@ -108,6 +108,36 @@ export function Home() {
         { name: "AI Generation", startWeek: 0.5, durationWeeks: 1 },
         { name: "Editing", startWeek: 1.5, durationWeeks: 0.5 }
       ]
+    },
+    { 
+      name: "Embroidery Stall", 
+      skills: ["Creative Production", "Visual Storytelling"], 
+      tools: ["Adobe Premiere Pro", "Adobe After Effects"],
+      link: "/projects/embroidery",
+      startDate: "May 2024",
+      endDate: "May 2024",
+      duration: "2 Weeks (14 Days)",
+      totalWeeks: 2,
+      tasks: [
+        { name: "Concept", startWeek: 0, durationWeeks: 0.5 },
+        { name: "Production", startWeek: 0.5, durationWeeks: 1 },
+        { name: "Editing", startWeek: 1.5, durationWeeks: 0.5 }
+      ]
+    },
+    { 
+      name: "Durga Mata Unreal", 
+      skills: ["Environment Development", "3D Sculpting", "Worldbuilding"], 
+      tools: ["Unreal Engine", "Blender", "Substance Painter"],
+      link: "/projects/durga",
+      startDate: "Jun 2024",
+      endDate: "Jul 2024",
+      duration: "4 Weeks (28 Days)",
+      totalWeeks: 4,
+      tasks: [
+        { name: "Concept & Modeling", startWeek: 0, durationWeeks: 1.5 },
+        { name: "Texturing", startWeek: 1.5, durationWeeks: 1 },
+        { name: "Unreal Setup", startWeek: 2.5, durationWeeks: 1.5 }
+      ]
     }
   ];
 
@@ -162,11 +192,64 @@ export function Home() {
         </motion.div>
       </section>
 
-      {/* Main Projects Tabs */}
+      {/* Skills & Toolkit Section */}
+      <section className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
+        <FadeIn className="w-full">
+          <h2 className="text-3xl md:text-5xl font-bold uppercase tracking-tighter mb-12 text-center">Skills & Tools</h2>
+          
+          <h3 className="text-xl md:text-2xl font-bold text-primary uppercase tracking-widest mb-8 border-b border-white/10 pb-4">Skills</h3>
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-left mb-16">
+            {skillsData.map((skillGroup) => (
+              <div key={skillGroup.category} className="bg-white/5 border border-white/10 rounded-xl p-6 hover:border-primary/30 transition-colors">
+                <h4 className="text-xl font-bold uppercase tracking-wider mb-4 text-white">
+                  {skillGroup.category}
+                </h4>
+                <div className="space-y-3">
+                  {skillGroup.items.map(skill => (
+                    <div key={skill} className="flex items-center gap-3">
+                      <button
+                        onClick={() => handleSkillClick(skill)}
+                        className={`flex items-center gap-2 px-3 py-1.5 rounded-md text-sm font-mono transition-all w-full text-left ${selectedSkill === skill ? 'bg-primary/20 text-primary border border-primary/50' : 'bg-black/40 text-gray-400 border border-transparent hover:bg-white/10 hover:text-white'}`}
+                      >
+                        <span>{skill}</span>
+                      </button>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <h3 className="text-xl md:text-2xl font-bold text-primary uppercase tracking-widest mb-8 border-b border-white/10 pb-4">Tools & Software</h3>
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
+            {toolsData.map((toolGroup) => (
+              <div key={toolGroup.category} className="bg-white/5 border border-white/10 rounded-xl p-6 hover:border-primary/30 transition-colors">
+                <h4 className="text-xl font-bold uppercase tracking-wider mb-4 text-white">
+                  {toolGroup.category}
+                </h4>
+                <div className="space-y-3">
+                  {toolGroup.items.map(tool => (
+                    <div key={tool} className="flex items-center gap-3">
+                      <button
+                        onClick={() => handleSkillClick(tool)}
+                        className={`flex items-center gap-2 px-3 py-1.5 rounded-md text-sm font-mono transition-all w-full text-left ${selectedSkill === tool ? 'bg-primary/20 text-primary border border-primary/50' : 'bg-black/40 text-gray-400 border border-transparent hover:bg-white/10 hover:text-white'}`}
+                      >
+                        <span>{tool}</span>
+                      </button>
+                    </div>
+                  ))}
+                </div>
+              </div>
+            ))}
+          </div>
+        </FadeIn>
+      </section>
+
+      {/* Featured Projects Tabs */}
       <section id="projects-section" className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative z-20">
         <FadeIn>
           <h2 className="text-4xl md:text-6xl font-bold uppercase tracking-tighter mb-12 text-center">
-            {selectedSkill ? `Projects using ${selectedSkill}` : "Main Projects"}
+            {selectedSkill ? `Projects using ${selectedSkill}` : "Featured Projects"}
           </h2>
         </FadeIn>
         
@@ -219,7 +302,7 @@ export function Home() {
           <>
             {/* Tabs */}
             <div className="flex justify-center flex-wrap gap-4 mb-12 border-b border-white/10 pb-4">
-          {["LEHER", "JHAPKI", "BULGARI", "NIVARA"].map((tab) => (
+          {["LEHER", "JHAPKI", "NIVARA"].map((tab) => (
             <button
               key={tab}
               onClick={() => setActiveTab(tab)}
@@ -262,21 +345,6 @@ export function Home() {
               </div>
             </motion.div>
           )}
-          {activeTab === "BULGARI" && (
-            <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-              <div>
-                <h3 className="text-3xl font-bold mb-4 uppercase">Bulgari AI Advertisement</h3>
-                <p className="text-primary font-mono mb-6">AI Advertisement</p>
-                <p className="text-gray-400 text-lg mb-8">A creative exploration of AI tools to generate a compelling advertisement concept, focusing on visual storytelling and prompt design.</p>
-                <Link to="/projects/bulgari" className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-black bg-primary hover:bg-primary/90 transition-colors">
-                  View Full Project
-                </Link>
-              </div>
-              <div className="rounded-xl overflow-hidden border border-white/10">
-                <img src="https://i.postimg.cc/SJLGx4wL/247fcf0a-6455-4294-acdb-dcde02e2e7f5.jpg" alt="Bulgari" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
-              </div>
-            </motion.div>
-          )}
           {activeTab === "NIVARA" && (
             <motion.div initial={{ opacity: 0, y: 20 }} animate={{ opacity: 1, y: 0 }} exit={{ opacity: 0, y: -20 }} className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
               <div>
@@ -297,6 +365,53 @@ export function Home() {
         )}
       </section>
 
+      {/* Supporting Projects Section */}
+      <section className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto relative z-20 border-t border-white/10">
+        <FadeIn>
+          <h2 className="text-4xl md:text-6xl font-bold uppercase tracking-tighter mb-12 text-center">
+            Supporting Projects
+          </h2>
+        </FadeIn>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-12">
+          <Link to="/projects/bulgari" className="block group">
+            <div className="p-6 rounded-xl border border-white/10 bg-white/5 hover:border-primary/50 transition-colors h-full flex flex-col justify-between">
+              <div>
+                <div className="rounded-xl overflow-hidden border border-white/10 mb-4 aspect-video">
+                  <img src="https://i.postimg.cc/SJLGx4wL/247fcf0a-6455-4294-acdb-dcde02e2e7f5.jpg" alt="Bulgari" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" referrerPolicy="no-referrer" />
+                </div>
+                <h3 className="text-2xl font-bold uppercase mb-2 group-hover:text-primary transition-colors">Bulgari AI Ad</h3>
+                <p className="text-gray-400 text-sm mb-4">AI Advertisement</p>
+              </div>
+              <span className="text-sm font-bold uppercase tracking-widest text-white group-hover:text-primary transition-colors mt-6 block">View Project &rarr;</span>
+            </div>
+          </Link>
+          <Link to="/projects/embroidery" className="block group">
+            <div className="p-6 rounded-xl border border-white/10 bg-white/5 hover:border-primary/50 transition-colors h-full flex flex-col justify-between">
+              <div>
+                <div className="rounded-xl overflow-hidden border border-white/10 mb-4 aspect-video">
+                  <img src="https://drive.google.com/thumbnail?id=191jUp6x9GMYpNDX7xisOB2oW8yhH78H5&sz=w1920" alt="Embroidery Stall" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" referrerPolicy="no-referrer" />
+                </div>
+                <h3 className="text-2xl font-bold uppercase mb-2 group-hover:text-primary transition-colors">Embroidery Stall</h3>
+                <p className="text-gray-400 text-sm mb-4">Creative Production</p>
+              </div>
+              <span className="text-sm font-bold uppercase tracking-widest text-white group-hover:text-primary transition-colors mt-6 block">View Project &rarr;</span>
+            </div>
+          </Link>
+          <Link to="/projects/durga" className="block group">
+            <div className="p-6 rounded-xl border border-white/10 bg-white/5 hover:border-primary/50 transition-colors h-full flex flex-col justify-between">
+              <div>
+                <div className="rounded-xl overflow-hidden border border-white/10 mb-4 aspect-video">
+                  <img src="https://picsum.photos/seed/durga/800/600" alt="Durga Mata Unreal" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" referrerPolicy="no-referrer" />
+                </div>
+                <h3 className="text-2xl font-bold uppercase mb-2 group-hover:text-primary transition-colors">Durga Mata Unreal</h3>
+                <p className="text-gray-400 text-sm mb-4">3D Environment</p>
+              </div>
+              <span className="text-sm font-bold uppercase tracking-widest text-white group-hover:text-primary transition-colors mt-6 block">View Project &rarr;</span>
+            </div>
+          </Link>
+        </div>
+      </section>
+
       {/* Technical Projects Section */}
       <section className="py-24 bg-zinc-900/50 border-y border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -307,7 +422,7 @@ export function Home() {
             <FadeIn delay={0.1}>
               <div className="space-y-6">
                 <p className="text-gray-400 text-lg leading-relaxed">
-                  A comprehensive collection of 3D modeling, environment design, and technical art explorations. This section showcases technical exploration, environment work, modeling, animation tests, and visual development.
+                  A collection of 3D modeling, environment design, and technical art explorations. Showcasing technical exploration, modeling, animation tests, and visual development.
                 </p>
                 <Link to="/projects/technical" className="inline-flex items-center justify-center px-6 py-3 border border-transparent text-base font-medium rounded-md text-black bg-primary hover:bg-primary/90 transition-colors">
                   View Technical Projects
@@ -326,59 +441,6 @@ export function Home() {
             </FadeIn>
           </div>
         </div>
-      </section>
-
-      {/* Skills & Toolkit Section */}
-      <section className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
-        <FadeIn className="w-full">
-          <h2 className="text-3xl md:text-5xl font-bold uppercase tracking-tighter mb-12 text-center">Skills & Tools</h2>
-          
-          <h3 className="text-xl md:text-2xl font-bold text-primary uppercase tracking-widest mb-8 border-b border-white/10 pb-4">Skills</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 text-left mb-16">
-            {skillsData.map((skillGroup) => (
-              <div key={skillGroup.category} className="bg-white/5 border border-white/10 rounded-xl p-6 hover:border-primary/30 transition-colors">
-                <h4 className="text-xl font-bold uppercase tracking-wider mb-4 text-white">
-                  {skillGroup.category}
-                </h4>
-                <div className="space-y-3">
-                  {skillGroup.items.map(skill => (
-                    <div key={skill} className="flex items-center gap-3">
-                      <button
-                        onClick={() => handleSkillClick(skill)}
-                        className={`flex items-center gap-2 px-3 py-1.5 rounded-md text-sm font-mono transition-all w-full text-left ${selectedSkill === skill ? 'bg-primary/20 text-primary border border-primary/50' : 'bg-black/40 text-gray-400 border border-transparent hover:bg-white/10 hover:text-white'}`}
-                      >
-                        <span>{skill}</span>
-                      </button>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <h3 className="text-xl md:text-2xl font-bold text-primary uppercase tracking-widest mb-8 border-b border-white/10 pb-4">Tools & Software</h3>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 text-left">
-            {toolsData.map((toolGroup) => (
-              <div key={toolGroup.category} className="bg-white/5 border border-white/10 rounded-xl p-6 hover:border-primary/30 transition-colors">
-                <h4 className="text-xl font-bold uppercase tracking-wider mb-4 text-white">
-                  {toolGroup.category}
-                </h4>
-                <div className="space-y-3">
-                  {toolGroup.items.map(tool => (
-                    <div key={tool} className="flex items-center gap-3">
-                      <button
-                        onClick={() => handleSkillClick(tool)}
-                        className={`flex items-center gap-2 px-3 py-1.5 rounded-md text-sm font-mono transition-all w-full text-left ${selectedSkill === tool ? 'bg-primary/20 text-primary border border-primary/50' : 'bg-black/40 text-gray-400 border border-transparent hover:bg-white/10 hover:text-white'}`}
-                      >
-                        <span>{tool}</span>
-                      </button>
-                    </div>
-                  ))}
-                </div>
-              </div>
-            ))}
-          </div>
-        </FadeIn>
       </section>
     </div>
   );
