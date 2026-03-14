@@ -6,8 +6,15 @@ import { VideoPlayer } from "@/src/components/VideoPlayer";
 import { FadeIn } from "@/src/components/FadeIn";
 import { ProjectGantt } from "@/src/components/ProjectGantt";
 import { ProjectSection } from "@/src/components/ProjectSection";
+import { ImageGallery } from "@/src/components/ImageGallery";
 
 export function Leher() {
+  const leherImages = [
+    "https://drive.google.com/thumbnail?id=14hEnkxJWwko3GM0IA9TzOuEMfVFUczqB&sz=w1920",
+    "https://drive.google.com/thumbnail?id=16398IxBbbf6O2L_kbIjAUrRYGsifzvF9&sz=w1920",
+    "https://drive.google.com/thumbnail?id=1Vciqv-eUZdreWbyJoS1OzBY7s_ZiPY4U&sz=w1920"
+  ];
+
   return (
     <ProjectLayout
       subtitle="Experimental Short Film"
@@ -140,6 +147,12 @@ export function Leher() {
         <p className="text-gray-400 leading-relaxed text-lg mb-8">
           During the development of Leher, several animation experiments were conducted to explore motion, weight, and fluid dynamics. These tests helped shape the final visual language of the film.
         </p>
+        
+        <div className="mb-12">
+          <h4 className="text-xl font-bold text-white mb-6">Visual Development</h4>
+          <ImageGallery images={leherImages} />
+        </div>
+
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <div className="space-y-4">
             <h4 className="text-xl font-bold text-white">Ocean Animation Experiment</h4>

@@ -1,8 +1,18 @@
 import { ProjectLayout } from "@/src/components/ProjectLayout";
 import { ScopeGrid } from "@/src/components/ScopeGrid";
 import { ProjectSection } from "@/src/components/ProjectSection";
+import { ImageGallery } from "@/src/components/ImageGallery";
 
 export function DurgaMataUnreal() {
+  const images = [
+    "https://drive.google.com/thumbnail?id=1OnnYnWDZfKjrgEP0uzu9-NbmbTQVTPu1&sz=w1920",
+    "https://drive.google.com/thumbnail?id=1TDg1ZZTkJhsBviyhS_y_di3Ld-LWGeq6&sz=w1920",
+    "https://drive.google.com/thumbnail?id=1Xj5x9cdXLm_mg06BY3ZsVdAzKcC0Z3Jd&sz=w1920",
+    "https://drive.google.com/thumbnail?id=1eQFMdIH6Uyw3usX-U9d3lbE3L4TLaG6P&sz=w1920",
+    "https://drive.google.com/thumbnail?id=1jl7aGXN0yndiiy3_757doyrxM6xrXVEf&sz=w1920",
+    "https://drive.google.com/thumbnail?id=1qA0qrao8IxAUIyTyJo6bCUnrqfghoCuZ&sz=w1920"
+  ];
+
   return (
     <ProjectLayout
       subtitle="3D Environment Development"
@@ -30,9 +40,7 @@ export function DurgaMataUnreal() {
       </ProjectSection>
       
       <ProjectSection title="Visuals">
-        <div className="rounded-xl overflow-hidden border border-white/10 aspect-video">
-          <img src="https://picsum.photos/seed/durga/1920/1080" alt="Durga Mata Unreal Environment" className="w-full h-full object-cover" referrerPolicy="no-referrer" />
-        </div>
+        <ImageGallery images={images} />
       </ProjectSection>
     </ProjectLayout>
   );

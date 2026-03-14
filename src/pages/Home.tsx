@@ -401,7 +401,7 @@ export function Home() {
             <div className="p-6 rounded-xl border border-white/10 bg-white/5 hover:border-primary/50 transition-colors h-full flex flex-col justify-between">
               <div>
                 <div className="rounded-xl overflow-hidden border border-white/10 mb-4 aspect-video">
-                  <img src="https://picsum.photos/seed/durga/800/600" alt="Durga Mata Unreal" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" referrerPolicy="no-referrer" />
+                  <img src="https://drive.google.com/thumbnail?id=1OnnYnWDZfKjrgEP0uzu9-NbmbTQVTPu1&sz=w1920" alt="Durga Mata Unreal" className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500" referrerPolicy="no-referrer" />
                 </div>
                 <h3 className="text-2xl font-bold uppercase mb-2 group-hover:text-primary transition-colors">Durga Mata Unreal</h3>
                 <p className="text-gray-400 text-sm mb-4">3D Environment</p>
