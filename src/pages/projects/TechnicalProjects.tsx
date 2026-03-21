@@ -1,5 +1,6 @@
 import { ProjectLayout } from "@/src/components/ProjectLayout";
 import { FadeIn } from "@/src/components/FadeIn";
+import { VideoPlayer } from "@/src/components/VideoPlayer";
 
 const rawUrls = [
   "https://drive.google.com/file/d/1-wkDFP8V32oTcNBBiBv6gzzDSGBjVBJD/view?usp=sharing",
@@ -86,7 +87,9 @@ const rawUrls = [
   "https://drive.google.com/file/d/1x-5ssaoWEGJhSTa3KSfxg-L_l14GI6gC/view?usp=sharing",
   "https://drive.google.com/file/d/1y_yMckaD_m7tHSOBGdDnViZdR8pwSicl/view?usp=sharing",
   "https://drive.google.com/file/d/1yk2PvGzwlGMQ9mIxkUVUYX2UTFERFXXG/view?usp=sharing",
-  "https://drive.google.com/file/d/1z26M-CjqrEfqm54hfzI46OLASgLpVguo/view?usp=sharing"
+  "https://drive.google.com/file/d/1z26M-CjqrEfqm54hfzI46OLASgLpVguo/view?usp=sharing",
+  "https://drive.google.com/file/d/14hEnkxJWwko3GM0IA9TzOuEMfVFUczqB/view?usp=sharing",
+  "https://drive.google.com/file/d/16398IxBbbf6O2L_kbIjAUrRYGsifzvF9/view?usp=sharing"
 ];
 
 const getImgSrc = (url: string) => {
@@ -119,7 +122,8 @@ const projects = [
     id: "character-design",
     title: "Character Design and Animation Studies",
     description: "A series of character design explorations and animation tests focusing on expression, movement, and personality.",
-    images: images.slice(60, 85),
+    video: "https://drive.google.com/file/d/14hEnkxJWwko3GM0IA9TzOuEMfVFUczqB/view?usp=sharing",
+    images: images.slice(60),
   }
 ];
 
@@ -143,6 +147,11 @@ export function TechnicalProjects() {
             </FadeIn>
 
             <FadeIn delay={0.2}>
+              {project.video && (
+                <div className="mb-12 rounded-xl overflow-hidden border border-white/10">
+                  <VideoPlayer url={project.video} />
+                </div>
+              )}
               <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
                 {project.images.map((src, index) => (
                   <div key={index} className="relative overflow-hidden rounded-xl border border-white/10 group break-inside-avoid shadow-lg">

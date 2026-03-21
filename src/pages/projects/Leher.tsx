@@ -10,8 +10,7 @@ import { ImageGallery } from "@/src/components/ImageGallery";
 
 export function Leher() {
   const leherImages = [
-    "https://drive.google.com/thumbnail?id=14hEnkxJWwko3GM0IA9TzOuEMfVFUczqB&sz=w1920",
-    "https://drive.google.com/thumbnail?id=16398IxBbbf6O2L_kbIjAUrRYGsifzvF9&sz=w1920"
+    "https://img.youtube.com/vi/5ViDti_Ly4k/maxresdefault.jpg"
   ];
 
   return (
@@ -113,7 +112,7 @@ export function Leher() {
           1-minute experimental short film that combined 2D animation, grain-based stop motion animation, live-action ocean footage, and sound design.
         </p>
         <div className="rounded-xl overflow-hidden border border-white/10 aspect-video">
-          <VideoPlayer url="https://drive.google.com/file/d/14hEnkxJWwko3GM0IA9TzOuEMfVFUczqB/view?usp=sharing" />
+          <VideoPlayer url="https://drive.google.com/file/d/1TCBgJpshMyjU1WRUTGa5L3wIK1jhXs8w/view?usp=sharing" />
         </div>
       </ProjectSection>
 
@@ -150,14 +149,6 @@ export function Leher() {
         <div className="mb-12">
           <h4 className="text-xl font-bold text-white mb-6">Visual Development</h4>
           <ImageGallery images={leherImages} />
-        </div>
-
-        <div className="space-y-4">
-          <h4 className="text-xl font-bold text-white">Leher Animation</h4>
-          <p className="text-gray-400 text-sm font-mono">Exploring fluid motion and character dynamics through 2D and 3D techniques.</p>
-          <div className="rounded-xl overflow-hidden border border-white/10">
-            <VideoPlayer url="https://youtu.be/5ViDti_Ly4k?si=irizh2PfMEdVh3i-" />
-          </div>
         </div>
       </ProjectSection>
 

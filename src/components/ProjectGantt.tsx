@@ -9,7 +9,6 @@ interface Task {
 export function ProjectGantt({ tasks, totalWeeks }: { tasks: Task[], totalWeeks: number }) {
   return (
     <div className="w-full overflow-x-auto bg-white/5 border border-white/10 rounded-xl p-6 mt-8">
-      <h4 className="text-xl font-bold text-white mb-6 uppercase tracking-wider">Gantt Chart Timeline</h4>
       <div className="min-w-[600px]">
         {/* Header */}
         <div className="flex border-b border-white/10 pb-2 mb-4">
