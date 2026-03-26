@@ -30,10 +30,7 @@ export function Leher() {
         />
         <div className="mt-8 text-gray-400 leading-relaxed text-lg space-y-4">
           <p>
-            Leher was an experimental short film project developed as part of a collaborative module exploring the concept of Rasa (emotional essence) through visual storytelling.
-          </p>
-          <p>
-            The project required students to interpret one or more Rasas and translate them into a short audio-visual experience using creative mediums such as animation, live action footage, and experimental techniques.
+            Leher is an experimental short film exploring Rasa (emotional essence) through visual storytelling. It translates emotional states into an audio-visual experience using animation, live-action, and experimental techniques.
           </p>
         </div>
       </ProjectSection>
@@ -41,10 +38,7 @@ export function Leher() {
       <ProjectSection title="Creative Objective">
         <div className="text-gray-400 leading-relaxed text-lg space-y-4">
           <p>
-            The creative objective of Leher was to explore how visual rhythm, texture, and motion can represent emotional transitions without relying on a traditional storyline.
-          </p>
-          <p>
-            The team aimed to depict the movement between fear and calmness, treating emotion as something fluid and cyclical rather than fixed. Inspired by ocean waves, the film reflects how emotional states rise and fall, much like the movement of water.
+            We explored how visual rhythm, texture, and motion can represent emotional transitions without a traditional storyline. Inspired by ocean waves, the film depicts the fluid, cyclical movement between fear and calmness.
           </p>
         </div>
       </ProjectSection>
@@ -127,23 +121,23 @@ export function Leher() {
       <ProjectSection title="Challenges & Solutions">
         <div className="space-y-6 text-gray-400 leading-relaxed text-lg">
           <div>
-            <strong className="text-white block mb-2">Challenge 1</strong>
+            <strong className="text-white block mb-2">Challenge 1: Team Participation</strong>
             <p>Inconsistent participation from some team members affected the workflow.</p>
             <strong className="text-white block mt-2 mb-2">Solution</strong>
-            <p>Re-distributed responsibilities and maintained clear communication to ensure project completion.</p>
+            <p>Re-distributed responsibilities and maintained clear communication.</p>
           </div>
           <div>
-            <strong className="text-white block mb-2">Challenge 2</strong>
+            <strong className="text-white block mb-2">Challenge 2: Time Constraints</strong>
             <p>Experimental grain-based stop motion animation was time-consuming.</p>
             <strong className="text-white block mt-2 mb-2">Solution</strong>
-            <p>Simplified scenes to focus on texture rather than complex movement, optimizing the production time.</p>
+            <p>Simplified scenes to focus on texture over complex movement.</p>
           </div>
         </div>
       </ProjectSection>
 
       <ProjectSection title="Process & Experimentation">
         <p className="text-gray-400 leading-relaxed text-lg mb-8">
-          During the development of Leher, several animation experiments were conducted to explore motion, weight, and fluid dynamics. These tests helped shape the final visual language of the film.
+          Animation experiments exploring motion, weight, and fluid dynamics helped shape the final visual language.
         </p>
         
         <div className="mb-12">
@@ -155,10 +149,7 @@ export function Leher() {
       <ProjectSection title="Final Outcome">
         <div className="text-gray-400 leading-relaxed text-lg space-y-4">
           <p>
-            The final output was a 1-minute experimental short film.
-          </p>
-          <p>
-            The project demonstrated how simple materials and abstract imagery can communicate complex emotions without relying on narrative storytelling. It enhanced skills in experimental animation, visual planning, and team leadership.
+            The final 1-minute film demonstrates how simple materials and abstract imagery communicate complex emotions without narrative storytelling, enhancing skills in experimental animation and visual planning.
           </p>
         </div>
       </ProjectSection>

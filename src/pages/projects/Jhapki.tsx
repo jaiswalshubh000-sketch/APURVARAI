@@ -39,10 +39,7 @@ export function Jhapki() {
         />
         <div className="mt-8 text-gray-400 leading-relaxed text-lg space-y-4">
           <p>
-            Jhapki is a short stop-motion film developed around the playful dynamics of classroom life. Inspired by the concept of "backbench culture," the narrative revolves around a subtle and humorous crush story unfolding between two students.
-          </p>
-          <p>
-            The project aimed to explore how small emotional moments in everyday environments can be translated into a stylized stop-motion format, utilizing physical materials like clay, paper, and wire.
+            Jhapki is a short stop-motion film exploring the playful dynamics of classroom life. Inspired by "backbench culture," it tells a humorous crush story using physical materials like clay, paper, and wire.
           </p>
         </div>
       </ProjectSection>
@@ -51,10 +48,7 @@ export function Jhapki() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="text-gray-400 leading-relaxed text-lg space-y-4">
             <p>
-              The theme for this project was provided by the faculty and centered around the idea of classroom life and backbenchers. Our objective was to interpret this theme in a way that felt relatable, light-hearted, and emotionally engaging.
-            </p>
-            <p>
-              Instead of focusing only on typical classroom chaos, we chose to explore the small and subtle moments that often happen in the back rows of a class. The goal was to create a short narrative around a cute classroom crush, capturing the innocence, awkwardness, and quiet interactions that many students experience during their school life. Through expressive animation and simple storytelling, we aimed to evoke a sense of nostalgia and warmth for the audience.
+              Our objective was to interpret the theme of 'classroom life' in a relatable, light-hearted way. Instead of typical chaos, we focused on the subtle moments in the back rows, creating a narrative around a cute classroom crush to evoke nostalgia and warmth.
             </p>
           </div>
           <img src="https://i.postimg.cc/vDdfKjNr/35796491-6996-4603-9b59-e17b5d2a8ae2.jpg" alt="Jhapki Concept" className="w-full rounded-xl border border-white/10" referrerPolicy="no-referrer" />
@@ -162,16 +156,16 @@ export function Jhapki() {
       <ProjectSection title="Challenges & Solutions">
         <div className="space-y-6 text-gray-400 leading-relaxed text-lg">
           <div>
-            <strong className="text-white block mb-2">Challenge 1</strong>
-            <p>Stop-motion animation is highly time-intensive, making it difficult to complete all planned scenes within the available schedule.</p>
+            <strong className="text-white block mb-2">Challenge 1: Time Constraints</strong>
+            <p>Stop-motion animation is highly time-intensive.</p>
             <strong className="text-white block mt-2 mb-2">Solution</strong>
-            <p>Scenes were prioritized and simplified to ensure the core narrative remained intact while maintaining production efficiency and meeting the deadline.</p>
+            <p>We prioritized and simplified scenes to maintain the core narrative and meet the deadline.</p>
           </div>
           <div>
-            <strong className="text-white block mb-2">Challenge 2</strong>
-            <p>Managing coordination across multiple team members working on different physical tasks simultaneously.</p>
+            <strong className="text-white block mb-2">Challenge 2: Team Coordination</strong>
+            <p>Coordinating multiple team members on physical tasks.</p>
             <strong className="text-white block mt-2 mb-2">Solution</strong>
-            <p>Clear task division and daily progress check-ins helped maintain alignment within the team and ensured a smooth workflow.</p>
+            <p>Clear task division and daily check-ins ensured a smooth workflow.</p>
           </div>
         </div>
       </ProjectSection>
@@ -179,10 +173,7 @@ export function Jhapki() {
       <ProjectSection title="Final Outcome">
         <div className="text-gray-400 leading-relaxed text-lg space-y-4">
           <p>
-            The final output was a short stop-motion film capturing the essence of a classroom crush.
-          </p>
-          <p>
-            The project successfully demonstrated skills in stop-motion animation, physical set design, visual storytelling, and team coordination. It provided valuable hands-on experience in managing a physical production pipeline from concept to final render.
+            The final output is a short stop-motion film capturing a classroom crush, demonstrating skills in animation, set design, storytelling, and team coordination.
           </p>
         </div>
       </ProjectSection>

@@ -101,29 +101,37 @@ const images = rawUrls.map(getImgSrc);
 
 const projects = [
   {
-    id: "3d-environment",
-    title: "3D Environment Development Project",
-    description: "A deep dive into the technical aspects of creative production, focusing on 3D modeling, sculpting, and real-time environment building.",
-    images: images.slice(0, 20),
+    id: "3d-modeling",
+    title: "3D Modeling & Sculpting",
+    description: "A deep dive into the technical aspects of creative production, focusing on 3D modeling and sculpting.",
+    images: images.slice(0, 15),
   },
   {
-    id: "digital-comic",
-    title: "Digital Comic Project",
-    description: "A visual narrative development project exploring comic storytelling, pacing, and digital illustration techniques.",
-    images: images.slice(20, 40),
+    id: "environment-design",
+    title: "Environment Design",
+    description: "Real-time environment building and world design explorations.",
+    images: images.slice(15, 30),
   },
   {
-    id: "graphic-traditional",
-    title: "Graphic Traditional Artwork",
-    description: "An exploration of traditional graphic art techniques, blending physical mediums with digital enhancements for unique visual outputs.",
-    images: images.slice(40, 60),
-  },
-  {
-    id: "character-design",
-    title: "Character Design and Animation Studies",
+    id: "animation-motion",
+    title: "Animation & Motion",
     description: "A series of character design explorations and animation tests focusing on expression, movement, and personality.",
     video: "https://drive.google.com/file/d/14hEnkxJWwko3GM0IA9TzOuEMfVFUczqB/view?usp=sharing",
-    images: images.slice(60),
+    images: images.slice(30, 45),
+  },
+  {
+    id: "movies",
+    title: "Movies",
+    description: "Film-related technical work, including editing, color grading, and compositing.",
+    images: images.slice(45, 60),
+    placeholder: "https://i.postimg.cc/Y90QJQqq/27ec90a3-7e14-457f-a584-41c97a956457.jpg" // Fallback if no images
+  },
+  {
+    id: "excel-data",
+    title: "Excel & Data",
+    description: "Spreadsheet and data visualization work for production tracking and inventory management.",
+    images: images.slice(60, 75),
+    placeholder: "https://drive.google.com/thumbnail?id=1uSCdCP9pOR0kXMaE_w9hRjv_XO1tXeB-&sz=w1920" // Fallback if no images
   }
 ];
 
@@ -153,7 +161,7 @@ export function TechnicalProjects() {
                 </div>
               )}
               <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
-                {project.images.map((src, index) => (
+                {project.images.length > 0 ? project.images.map((src, index) => (
                   <div key={index} className="relative overflow-hidden rounded-xl border border-white/10 group break-inside-avoid shadow-lg">
                     <img
                       src={src}
@@ -163,7 +171,21 @@ export function TechnicalProjects() {
                       loading="lazy"
                     />
                   </div>
-                ))}
+                )) : (
+                  <div className="relative overflow-hidden rounded-xl border border-white/10 group break-inside-avoid shadow-lg aspect-video bg-zinc-900 flex items-center justify-center">
+                    {project.placeholder ? (
+                      <img
+                        src={project.placeholder}
+                        alt={`${project.title} placeholder`}
+                        className="w-full h-full object-cover opacity-50 group-hover:scale-105 transition-transform duration-700"
+                        referrerPolicy="no-referrer"
+                        loading="lazy"
+                      />
+                    ) : (
+                      <span className="text-gray-500 font-mono text-sm uppercase tracking-widest">Visual Placeholder</span>
+                    )}
+                  </div>
+                )}
               </div>
             </FadeIn>
           </div>

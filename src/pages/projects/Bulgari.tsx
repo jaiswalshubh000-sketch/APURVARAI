@@ -24,10 +24,7 @@ export function Bulgari() {
         />
         <div className="mt-8 text-gray-400 leading-relaxed text-lg space-y-4">
           <p>
-            This project involved creating an AI-generated advertisement concept for the luxury brand Bulgari, featuring the iconic Serpenti necklace.
-          </p>
-          <p>
-            The objective was to explore how artificial intelligence tools can be used to produce a cinematic luxury advertisement with minimal traditional production resources, utilizing AI imagery and video editing as the primary mediums.
+            This project is an AI-generated advertisement concept for Bulgari's Serpenti necklace. It explores using AI tools to produce a cinematic luxury ad with minimal traditional resources.
           </p>
         </div>
       </ProjectSection>
@@ -36,10 +33,7 @@ export function Bulgari() {
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="text-gray-400 leading-relaxed text-lg space-y-4">
             <p>
-              The creative direction was based on a luxury crime aesthetic, pushing the boundaries of generative storytelling.
-            </p>
-            <p>
-              The narrative shows a jewelry theft unfolding in reverse chronological order, starting from the escape and ending at the heist itself, highlighting the Bulgari necklace throughout the sequence.
+              Based on a luxury crime aesthetic, the narrative shows a jewelry theft unfolding in reverse chronological order, highlighting the Bulgari necklace throughout the sequence.
             </p>
           </div>
           <img src="https://i.postimg.cc/9rPBQ2vt/34db7e0d-9877-4c7e-823f-3758ce343b1b.jpg" alt="Bulgari Concept" className="w-full rounded-xl border border-white/10" referrerPolicy="no-referrer" />
@@ -128,12 +122,10 @@ export function Bulgari() {
       <ProjectSection title="Challenges & Solutions">
         <div className="space-y-6 text-gray-400 leading-relaxed text-lg">
           <div>
-            <strong className="text-white block mb-2">Challenge</strong>
-            <p>Maintaining brand style and consistency across AI-generated frames was difficult, as generative tools often introduce unwanted variations.</p>
-          </div>
-          <div>
-            <strong className="text-white block mb-2">Solution</strong>
-            <p>Iterated heavily on prompts and utilized specific style keywords to ensure the luxury aesthetic of Bulgari was preserved across all AI generations.</p>
+            <strong className="text-white block mb-2">Challenge: Brand Consistency</strong>
+            <p>Maintaining brand style and consistency across AI-generated frames.</p>
+            <strong className="text-white block mt-2 mb-2">Solution</strong>
+            <p>Iterated heavily on prompts and utilized specific style keywords to preserve the luxury aesthetic.</p>
           </div>
         </div>
       </ProjectSection>
@@ -141,10 +133,7 @@ export function Bulgari() {
       <ProjectSection title="Final Outcome">
         <div className="text-gray-400 leading-relaxed text-lg space-y-4">
           <p>
-            The final output was a 40-second experimental AI-generated advertisement combining AI-generated visuals, AI-produced music, and digital editing.
-          </p>
-          <p>
-            The project successfully demonstrated skills in AI prompt design, generative concept development, and visual storytelling. It provided valuable learnings about AI-driven cinematics, prompt engineering for consistency, and creative direction in a purely digital, generative pipeline.
+            The final 40-second experimental AI-generated advertisement demonstrates skills in AI prompt design, generative concept development, and visual storytelling, providing valuable learnings in AI-driven cinematics.
           </p>
         </div>
       </ProjectSection>

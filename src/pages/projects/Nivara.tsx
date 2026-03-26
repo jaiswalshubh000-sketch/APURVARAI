@@ -47,6 +47,61 @@ export function Nivara() {
         </div>
       </ProjectSection>
 
+      <ProjectSection title="World Building — Concept & Ideation">
+        <h3 className="text-2xl font-bold uppercase tracking-widest mb-6 text-white">Pre-Production Sketches & World-Building</h3>
+        
+        {/* Horizontal Scrollable Gallery */}
+        <div className="flex overflow-x-auto gap-6 pb-8 snap-x snap-mandatory hide-scrollbar">
+          {[
+            { id: 1, title: "Initial Concept Sketch", desc: "Early layout of the four elemental cities." },
+            { id: 2, title: "Character Ideation", desc: "Costume and cultural design for the inhabitants." },
+            { id: 3, title: "Architecture Study", desc: "Structural exploration for the central arena." },
+            { id: 4, title: "Lore Mapping", desc: "Connecting mechanics to mythology." }
+          ].map((item) => (
+            <div key={item.id} className="min-w-[300px] md:min-w-[400px] bg-zinc-900 border border-white/10 rounded-xl overflow-hidden snap-center group flex-shrink-0">
+              <div className="aspect-video bg-black/50 flex items-center justify-center relative">
+                <div className="absolute inset-0 flex items-center justify-center opacity-50 group-hover:opacity-100 transition-opacity">
+                  <span className="font-mono text-xs uppercase tracking-widest text-gray-400">Concept Art Placeholder</span>
+                </div>
+              </div>
+              <div className="p-4">
+                <h4 className="text-white font-bold uppercase tracking-wider text-sm mb-1">{item.title}</h4>
+                <p className="text-gray-500 text-xs font-mono">{item.desc}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+        
+        <p className="text-gray-400 font-mono text-sm mb-8 italic">
+          Early concept sketches and idea-phase explorations for the Nivara world.
+        </p>
+        
+        <div className="text-center mb-12">
+          <a 
+            href="https://drive.google.com/drive/folders/1yisIvRAskO53i6ihBHou1ow6ppWnT_5O?usp=sharing" 
+            target="_blank" 
+            rel="noopener noreferrer"
+            className="inline-flex items-center justify-center px-6 py-3 border border-white/20 text-base font-medium rounded-md text-white hover:bg-white/10 transition-colors uppercase tracking-widest text-sm"
+          >
+            View Full World-Building Folder →
+          </a>
+        </div>
+
+        {/* Additional Visual Elements (2C) */}
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mt-12">
+          <div className="bg-zinc-900 border border-white/10 rounded-xl p-6 flex flex-col justify-center items-center text-center">
+            <div className="text-5xl font-black text-primary mb-2">4</div>
+            <div className="text-white font-bold uppercase tracking-widest text-sm mb-2">Elemental Factions</div>
+            <p className="text-gray-500 text-xs font-mono">Earth, Water, Fire, Air — each representing a unique culture and architectural style derived from the Ludo board corners.</p>
+          </div>
+          <div className="bg-zinc-900 border border-white/10 rounded-xl p-6 flex flex-col justify-center items-center text-center">
+            <div className="text-5xl font-black text-primary mb-2">1</div>
+            <div className="text-white font-bold uppercase tracking-widest text-sm mb-2">Central Arena (Niveth)</div>
+            <p className="text-gray-500 text-xs font-mono">The sacred convergence point where the ritualistic game is played to maintain universal balance.</p>
+          </div>
+        </div>
+      </ProjectSection>
+
       <ProjectSection title="Roles & Responsibilities">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           <div className="text-gray-400 leading-relaxed text-lg space-y-4">

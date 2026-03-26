@@ -160,9 +160,14 @@ export function Home() {
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-background/50 to-background z-10 pointer-events-none" />
         
         <motion.div style={{ y }} className="relative z-20 text-center px-4 max-w-5xl mx-auto w-full flex flex-col items-center mt-12">
+          {/* Bold Typographic Mark */}
+          <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 text-[12vw] font-black text-white/[0.03] whitespace-nowrap pointer-events-none -z-10 tracking-tighter select-none">
+            PRODUCER
+          </div>
+
           {/* Profile Picture */}
           <FadeIn delay={0.1}>
-            <div className="w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-primary/20 shadow-2xl shadow-primary/20 mb-8 mx-auto">
+            <div className="w-40 h-40 md:w-48 md:h-48 rounded-full overflow-hidden border-4 border-primary/20 shadow-2xl shadow-primary/20 mb-8 mx-auto relative z-10">
               <img
                 src="https://i.postimg.cc/Y90QJQqq/27ec90a3-7e14-457f-a584-41c97a956457.jpg"
                 alt="Apurva Rai"
@@ -173,23 +178,66 @@ export function Home() {
           </FadeIn>
 
           <FadeIn delay={0.2}>
-            <h1 className="text-5xl md:text-7xl font-bold tracking-tighter mb-4 uppercase leading-none">
+            <h1 className="text-5xl md:text-7xl font-bold tracking-tighter mb-4 uppercase leading-none relative z-10">
               Apurva Rai
             </h1>
-            <p className="text-xl md:text-2xl text-primary font-mono mb-2 uppercase tracking-widest">
+            <p className="text-xl md:text-2xl text-primary font-mono mb-2 uppercase tracking-widest relative z-10">
               Creative Producer | Project Coordination
             </p>
-            <p className="text-md md:text-lg text-gray-400 font-mono mb-6 uppercase tracking-wider">
+            <p className="text-md md:text-lg text-gray-400 font-mono mb-6 uppercase tracking-wider relative z-10">
               3D Pipeline | Visual Media
             </p>
           </FadeIn>
           
           <FadeIn delay={0.4}>
-            <p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mb-12 leading-relaxed">
+            <p className="text-lg md:text-xl text-gray-400 max-w-3xl mx-auto mb-12 leading-relaxed relative z-10">
               I focus on the architecture of creative projects—orchestrating ideas, driving team collaboration, and delivering visual outcomes through efficient workflows. With a background in animation, I have directed everything from stop-motion films to experimental media. I thrive at the intersection of creativity and organization, guiding design-driven projects seamlessly from early concept to final execution.
             </p>
           </FadeIn>
         </motion.div>
+      </section>
+
+      {/* Recent Projects Section */}
+      <section className="py-24 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto border-t border-white/10 relative z-20">
+        <FadeIn>
+          <h2 className="text-3xl md:text-5xl font-bold uppercase tracking-tighter mb-12 text-center">Recent Projects</h2>
+          <Link to="/projects/recent" className="block group">
+            <div className="bg-zinc-900 border border-white/10 rounded-xl p-8 hover:border-primary/50 transition-all relative overflow-hidden shadow-2xl">
+              <div className="absolute top-6 right-6 z-10">
+                <span className="inline-block bg-primary text-black font-bold uppercase tracking-widest text-xs px-3 py-1 rounded-full shadow-lg">
+                  🎬 Current Project
+                </span>
+              </div>
+              <h3 className="text-3xl font-bold uppercase tracking-widest mb-4 text-white group-hover:text-primary transition-colors pr-32 relative z-10">
+                Three-Film Production Management
+              </h3>
+              <p className="text-gray-400 text-lg leading-relaxed mb-8 max-w-3xl relative z-10">
+                Managing the production of three short fiction films — Nartaki, Bloom, and Mafia — simultaneously over a one-month timeline. Parallel coordination across multiple crews, locations, and production schedules.
+              </p>
+              <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-8 relative z-10">
+                <div className="bg-black/40 p-4 rounded-lg border border-white/5">
+                  <div className="text-gray-500 font-mono text-xs uppercase mb-1">Project Type</div>
+                  <div className="font-bold text-sm">Live-Action Film Production Management</div>
+                </div>
+                <div className="bg-black/40 p-4 rounded-lg border border-white/5">
+                  <div className="text-gray-500 font-mono text-xs uppercase mb-1">Projects</div>
+                  <div className="font-bold text-sm">Nartaki | Bloom | Mafia</div>
+                </div>
+                <div className="bg-black/40 p-4 rounded-lg border border-white/5">
+                  <div className="text-gray-500 font-mono text-xs uppercase mb-1">Duration</div>
+                  <div className="font-bold text-sm">1 Month</div>
+                </div>
+                <div className="bg-black/40 p-4 rounded-lg border border-white/5">
+                  <div className="text-gray-500 font-mono text-xs uppercase mb-1">Team Size</div>
+                  <div className="font-bold text-sm">3 Teams (5–7 members)</div>
+                </div>
+              </div>
+              <span className="text-sm font-bold uppercase tracking-widest text-white group-hover:text-primary transition-colors flex items-center relative z-10">
+                View Full Details <span className="ml-2">→</span>
+              </span>
+            </div>
+          </Link>
+        </FadeIn>
       </section>
 
       {/* Skills & Toolkit Section */}

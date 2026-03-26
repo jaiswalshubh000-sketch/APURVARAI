@@ -70,8 +70,28 @@
   }
   body {
     @apply bg-background text-foreground font-sans antialiased;
+    top: 0px !important;
   }
   h1, h2, h3, h4, h5, h6 {
     @apply font-bold tracking-tight;
   }
+}
+
+/* Hide Google Translate UI elements */
+.goog-te-banner-frame.skiptranslate {
+    display: none !important;
+} 
+.goog-tooltip {
+    display: none !important;
+}
+.goog-tooltip:hover {
+    display: none !important;
+}
+.goog-text-highlight {
+    background-color: transparent !important;
+    border: none !important; 
+    box-shadow: none !important;
+}
+#goog-gt-tt {
+    display: none !important;
 }

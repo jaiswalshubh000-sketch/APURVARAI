@@ -22,7 +22,7 @@ export function DurgaMataUnreal() {
       <ProjectSection title="Project Overview">
         <div className="text-gray-400 leading-relaxed text-lg space-y-4">
           <p>
-            An ambitious project focused on creating a highly detailed, culturally significant 3D environment using Unreal Engine. This project explores high-fidelity sculpting, texturing, and real-time rendering techniques to bring a majestic scene to life.
+            An ambitious project creating a highly detailed, culturally significant 3D environment in Unreal Engine. It explores high-fidelity sculpting, texturing, and real-time rendering.
           </p>
         </div>
       </ProjectSection>
