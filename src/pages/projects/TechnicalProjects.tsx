@@ -101,37 +101,28 @@ const images = rawUrls.map(getImgSrc);
 
 const projects = [
   {
-    id: "3d-modeling",
-    title: "3D Modeling & Sculpting",
-    description: "A deep dive into the technical aspects of creative production, focusing on 3D modeling and sculpting.",
-    images: images.slice(0, 15),
+    id: "3d-environment",
+    title: "3D Environment Development Project",
+    description: "3D sculpts, ZBrush work, Blender models, and environment renders.",
+    images: images.slice(0, 20),
   },
   {
-    id: "environment-design",
-    title: "Environment Design",
-    description: "Real-time environment building and world design explorations.",
-    images: images.slice(15, 30),
+    id: "digital-comic",
+    title: "Digital Comic Project",
+    description: "Comic panels, sequential art, and illustrated narrative pages.",
+    images: images.slice(20, 40),
   },
   {
-    id: "animation-motion",
-    title: "Animation & Motion",
-    description: "A series of character design explorations and animation tests focusing on expression, movement, and personality.",
-    video: "https://drive.google.com/file/d/14hEnkxJWwko3GM0IA9TzOuEMfVFUczqB/view?usp=sharing",
-    images: images.slice(30, 45),
+    id: "graphic-traditional",
+    title: "Graphic Traditional Artwork",
+    description: "Traditional media: pencil, ink, paint, and mixed media.",
+    images: images.slice(40, 60),
   },
   {
-    id: "movies",
-    title: "Movies",
-    description: "Film-related technical work, including editing, color grading, and compositing.",
-    images: images.slice(45, 60),
-    placeholder: "https://i.postimg.cc/Y90QJQqq/27ec90a3-7e14-457f-a584-41c97a956457.jpg" // Fallback if no images
-  },
-  {
-    id: "excel-data",
-    title: "Excel & Data",
-    description: "Spreadsheet and data visualization work for production tracking and inventory management.",
-    images: images.slice(60, 75),
-    placeholder: "https://drive.google.com/thumbnail?id=1uSCdCP9pOR0kXMaE_w9hRjv_XO1tXeB-&sz=w1920" // Fallback if no images
+    id: "character-animation",
+    title: "Character Design and Animation Studies",
+    description: "Character turnarounds, expression sheets, and animation pose studies.",
+    images: images.slice(60, 88), // Using the rest of the images
   }
 ];
 
@@ -155,11 +146,6 @@ export function TechnicalProjects() {
             </FadeIn>
 
             <FadeIn delay={0.2}>
-              {project.video && (
-                <div className="mb-12 rounded-xl overflow-hidden border border-white/10">
-                  <VideoPlayer url={project.video} />
-                </div>
-              )}
               <div className="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
                 {project.images.length > 0 ? project.images.map((src, index) => (
                   <div key={index} className="relative overflow-hidden rounded-xl border border-white/10 group break-inside-avoid shadow-lg">

@@ -51,6 +51,53 @@ export function Recent() {
           </div>
         </FadeIn>
 
+        {/* 1A. PRODUCTION MEDIA */}
+        <FadeIn delay={0.05}>
+          <h2 className="text-3xl font-bold uppercase tracking-tighter mb-8">Production Photos & Videos</h2>
+          <div className="mb-16">
+            {/* 
+              const FILM_MEDIA = [
+                // ADD FILE IDs HERE
+                // Format: { id: 'FILE_ID', type: 'image'|'video', label: 'description' }
+                // Example: { id: '1ZNwqbxFKxz1zK3YL0nYCGLJ9AkJ40sdR', type: 'video', label: 'Shoot Day 1' }
+              ];
+            */}
+            <h3 className="text-xl font-bold uppercase tracking-widest mb-6 text-primary">Production Videos</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+              {[1, 2].map((_, i) => (
+                <div key={i} className="aspect-video bg-zinc-900 rounded-xl border border-white/10 flex flex-col items-center justify-center text-gray-500">
+                  <svg className="w-12 h-12 mb-4 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                  </svg>
+                  <span className="font-mono text-sm uppercase tracking-widest">Add Video</span>
+                </div>
+              ))}
+            </div>
+
+            <h3 className="text-xl font-bold uppercase tracking-widest mb-6 text-primary">Production Photos</h3>
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
+              {[1, 2, 3, 4, 5, 6].map((_, i) => (
+                <div key={i} className="aspect-square bg-zinc-900 rounded-xl border border-white/10 flex flex-col items-center justify-center text-gray-500">
+                  <Camera className="w-8 h-8 mb-2 opacity-50" />
+                  <span className="font-mono text-xs uppercase tracking-widest">Add Photo</span>
+                </div>
+              ))}
+            </div>
+
+            <div className="text-center">
+              <a 
+                href="https://drive.google.com/drive/folders/1J63pNANLi8zgWNBe2X6qvPY5-fRpplxe?usp=sharing" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center px-6 py-3 border border-white/20 text-base font-medium rounded-md text-white hover:bg-white/10 transition-colors uppercase tracking-widest text-sm"
+              >
+                View Media Folder →
+              </a>
+            </div>
+          </div>
+        </FadeIn>
+
         {/* 1B. PRODUCTION FLOW DIAGRAM */}
         <FadeIn delay={0.1}>
           <h2 className="text-3xl font-bold uppercase tracking-tighter mb-8">Production Flow</h2>
@@ -322,7 +369,9 @@ export function Recent() {
               { label: "Call Sheet", icon: Calendar },
               { label: "Production Schedule", icon: Calendar },
               { label: "Task Tracker", icon: FileSpreadsheet },
-              { label: "Timeline Overview", icon: FileSpreadsheet }
+              { label: "Timeline Overview", icon: FileSpreadsheet },
+              { label: "Shoot Day Log", icon: FileSpreadsheet },
+              { label: "Location Breakdown", icon: FileSpreadsheet }
             ].map((doc, i) => (
               <a 
                 key={i}
