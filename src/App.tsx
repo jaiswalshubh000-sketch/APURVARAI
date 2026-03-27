@@ -16,6 +16,7 @@ import { EmbroideryStall } from "./pages/projects/EmbroideryStall";
 import { DurgaMataUnreal } from "./pages/projects/DurgaMataUnreal";
 import { Recent } from "./pages/projects/Recent";
 import { Contact } from "./pages/Contact";
+import { Audit } from "./pages/Audit";
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -45,6 +46,7 @@ export default function App() {
             <Route path="/projects/embroidery" element={<EmbroideryStall />} />
             <Route path="/projects/durga" element={<DurgaMataUnreal />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/audit" element={<Audit />} />
           </Routes>
         </main>
       </div>

@@ -1,6 +1,5 @@
 import { ProjectLayout } from "@/src/components/ProjectLayout";
 import { FadeIn } from "@/src/components/FadeIn";
-import { VideoPlayer } from "@/src/components/VideoPlayer";
 
 const rawUrls = [
   "https://drive.google.com/file/d/1-wkDFP8V32oTcNBBiBv6gzzDSGBjVBJD/view?usp=sharing",
