@@ -62,38 +62,15 @@ export function Recent() {
                 // Example: { id: '1ZNwqbxFKxz1zK3YL0nYCGLJ9AkJ40sdR', type: 'video', label: 'Shoot Day 1' }
               ];
             */}
-            <h3 className="text-xl font-bold uppercase tracking-widest mb-6 text-primary">Production Videos</h3>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
-              {[1, 2].map((_, i) => (
-                <div key={i} className="aspect-video bg-zinc-900 rounded-xl border border-white/10 flex flex-col items-center justify-center text-gray-500">
-                  <svg className="w-12 h-12 mb-4 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M14.752 11.168l-3.197-2.132A1 1 0 0010 9.87v4.263a1 1 0 001.555.832l3.197-2.132a1 1 0 000-1.664z" />
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                  </svg>
-                  <span className="font-mono text-sm uppercase tracking-widest">Add Video</span>
-                </div>
-              ))}
-            </div>
-
-            <h3 className="text-xl font-bold uppercase tracking-widest mb-6 text-primary">Production Photos</h3>
-            <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
-              {[1, 2, 3, 4, 5, 6].map((_, i) => (
-                <div key={i} className="aspect-square bg-zinc-900 rounded-xl border border-white/10 flex flex-col items-center justify-center text-gray-500">
-                  <Camera className="w-8 h-8 mb-2 opacity-50" />
-                  <span className="font-mono text-xs uppercase tracking-widest">Add Photo</span>
-                </div>
-              ))}
-            </div>
-
-            <div className="text-center">
-              <a 
-                href="https://drive.google.com/drive/folders/1J63pNANLi8zgWNBe2X6qvPY5-fRpplxe?usp=sharing" 
-                target="_blank" 
-                rel="noopener noreferrer"
-                className="inline-flex items-center justify-center px-6 py-3 border border-white/20 text-base font-medium rounded-md text-white hover:bg-white/10 transition-colors uppercase tracking-widest text-sm"
-              >
-                View Media Folder →
-              </a>
+            <h3 className="text-xl font-bold uppercase tracking-widest mb-6 text-primary">Production Photos & Videos</h3>
+            <div className="w-full rounded-xl overflow-hidden border border-white/10 bg-zinc-900 h-[600px]">
+              <iframe 
+                src="https://drive.google.com/embeddedfolderview?id=1J63pNANLi8zgWNBe2X6qvPY5-fRpplxe#grid" 
+                width="100%" 
+                height="100%" 
+                style={{ border: 'none' }}
+                title="Production Media Folder"
+              ></iframe>
             </div>
           </div>
         </FadeIn>
@@ -395,20 +372,6 @@ export function Recent() {
             >
               View All Production Docs →
             </a>
-          </div>
-        </FadeIn>
-
-        {/* 1G. BEHIND-THE-SCENES IMAGE GRID */}
-        <FadeIn delay={0.6}>
-          <h2 className="text-3xl font-bold uppercase tracking-tighter mb-4">Set / Behind-the-Scenes — Nartaki, Bloom & Mafia</h2>
-          <p className="text-gray-400 mb-8 font-mono">Production stills from the shoot — images to be added.</p>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-6 mb-16">
-            {[1, 2, 3].map((i) => (
-              <div key={i} className="bg-zinc-900 border border-white/10 rounded-xl aspect-square flex flex-col items-center justify-center text-gray-500 hover:border-white/30 transition-colors">
-                <Camera className="w-12 h-12 mb-4 opacity-50" />
-                <span className="font-mono text-sm uppercase tracking-widest">Add Image</span>
-              </div>
-            ))}
           </div>
         </FadeIn>
 

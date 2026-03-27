@@ -162,41 +162,6 @@ export function Leher() {
           </p>
         </div>
       </ProjectSection>
-
-      <ProjectSection title="Behind the Scenes">
-        <div className="mb-8">
-          <p className="text-gray-400 leading-relaxed text-lg mb-6">
-            Behind-the-scenes stills from the Leher production.
-          </p>
-          
-          {/* 
-            const LEHER_MEDIA = [
-              // ADD FILE IDs HERE
-              // Format: { id: 'FILE_ID', type: 'image', label: 'description' }
-            ];
-          */}
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 mb-8">
-            {[1, 2, 3, 4, 5, 6].map((_, i) => (
-              <div key={i} className="aspect-square bg-zinc-900 rounded-xl border border-white/10 flex flex-col items-center justify-center text-gray-500">
-                <svg className="w-8 h-8 mb-2 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M3 9a2 2 0 012-2h.93a2 2 0 001.664-.89l.812-1.22A2 2 0 0110.07 4h3.86a2 2 0 011.664.89l.812 1.22A2 2 0 0018.07 7H19a2 2 0 012 2v9a2 2 0 01-2 2H5a2 2 0 01-2-2V9z" />
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1.5} d="M15 13a3 3 0 11-6 0 3 3 0 016 0z" />
-                </svg>
-                <span className="font-mono text-xs uppercase tracking-widest">Add Photo</span>
-              </div>
-            ))}
-          </div>
-          
-          <a 
-            href="https://drive.google.com/drive/folders/11CrTcnltHzK7gJ2jSy5m3lETBIX0Fm_g?usp=sharing" 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className="inline-flex items-center gap-2 bg-primary/10 text-primary border border-primary/30 px-6 py-3 rounded-full font-mono text-sm uppercase tracking-widest hover:bg-primary hover:text-white transition-colors"
-          >
-            View Behind the Scenes Photos &rarr;
-          </a>
-        </div>
-      </ProjectSection>
     </ProjectLayout>
   );
 }
