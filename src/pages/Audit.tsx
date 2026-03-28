@@ -91,44 +91,39 @@ const rawUrls = [
   "16398IxBbbf6O2L_kbIjAUrRYGsifzvF9"
 ];
 
-const prompt = `Classify this image into exactly one of the following 4 categories. Return ONLY the category number (1, 2, 3, or 4).
-
-RULE 1 -> "3D Environment Development"
-Assign any image that shows:
-- ZBrush sculpts or high-poly meshes
-- Blender or Maya 3D models
-- Unreal Engine environment screenshots
-- Textured 3D assets
-- Wire-frame or retopology views
-- Any rendered 3D scene or environment
-
-RULE 2 -> "Digital Comic"
-Assign any image that shows:
-- Sequential comic panels
-- Illustrated story pages with panel borders
-- Comic-style speech bubbles or captions
-- Page layouts with multiple illustrated frames
-- Narrative sequential art
-
-RULE 3 -> "Graphic Traditional Artwork"
-Assign any image that shows:
-- Pencil, charcoal, or ink drawings on paper
-- Watercolour or acrylic painted work
-- Mixed media physical artwork
-- Scanned or photographed traditional art pieces
-- Sketchbook pages that are NOT character design studies
-
-RULE 4 -> "Character Design and Animation Studies"
-Assign any image that shows:
-- Character turnaround sheets (front/side/back views)
-- Expression charts or emotion sheets
-- Pose study sheets
-- Animation breakdown frames
-- Character design concept sheets
-- Digital character illustrations clearly meant as design references
-
-If it's ambiguous, pick the most specific/technical category.
-Return ONLY the number: 1, 2, 3, or 4.`;
+const prompt = "Classify this image into exactly one of the following 4 categories. Return ONLY the category number (1, 2, 3, or 4).\n\n" +
+"RULE 1 -> \"3D Environment Development\"\n" +
+"Assign any image that shows:\n" +
+"- ZBrush sculpts or high-poly meshes\n" +
+"- Blender or Maya 3D models\n" +
+"- Unreal Engine environment screenshots\n" +
+"- Textured 3D assets\n" +
+"- Wire-frame or retopology views\n" +
+"- Any rendered 3D scene or environment\n\n" +
+"RULE 2 -> \"Digital Comic\"\n" +
+"Assign any image that shows:\n" +
+"- Sequential comic panels\n" +
+"- Illustrated story pages with panel borders\n" +
+"- Comic-style speech bubbles or captions\n" +
+"- Page layouts with multiple illustrated frames\n" +
+"- Narrative sequential art\n\n" +
+"RULE 3 -> \"Graphic Traditional Artwork\"\n" +
+"Assign any image that shows:\n" +
+"- Pencil, charcoal, or ink drawings on paper\n" +
+"- Watercolour or acrylic painted work\n" +
+"- Mixed media physical artwork\n" +
+"- Scanned or photographed traditional art pieces\n" +
+"- Sketchbook pages that are NOT character design studies\n\n" +
+"RULE 4 -> \"Character Design and Animation Studies\"\n" +
+"Assign any image that shows:\n" +
+"- Character turnaround sheets (front/side/back views)\n" +
+"- Expression charts or emotion sheets\n" +
+"- Pose study sheets\n" +
+"- Animation breakdown frames\n" +
+"- Character design concept sheets\n" +
+"- Digital character illustrations clearly meant as design references\n\n" +
+"If it's ambiguous, pick the most specific/technical category.\n" +
+"Return ONLY the number: 1, 2, 3, or 4.";
 
 export function Audit() {
   const [results, setResults] = useState<Record<string, string[]>>({
@@ -147,7 +142,7 @@ export function Audit() {
       
       for (let i = 0; i < rawUrls.length; i++) {
         const id = rawUrls[i];
-        const url = \`https://drive.google.com/thumbnail?id=\${id}&sz=w1000\`;
+        const url = "https://drive.google.com/thumbnail?id=" + id + "&sz=w1000";
         
         try {
           const imgRes = await fetch(url);
@@ -173,10 +168,10 @@ export function Audit() {
           
           const category = response.text?.trim() || "unknown";
           if (newResults[category]) {
-            newResults[category].push(\`"https://drive.google.com/file/d/\${id}/view?usp=sharing"\`);
+            newResults[category].push("\"https://drive.google.com/file/d/" + id + "/view?usp=sharing\"");
           }
         } catch (e) {
-          console.error(\`Failed for \${id}\`, e);
+          console.error("Failed for " + id, e);
         }
         
         setProgress(i + 1);
