@@ -6,3 +6,7 @@ coverage/
 *.log
 .env*
 !.env.example
+api_key.txt
+scripts/audit_results.json
+*.bundle.js
+
